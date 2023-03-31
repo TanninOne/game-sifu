@@ -1,0 +1,35 @@
+{
+  "name": "game-sifu",
+  "version": "0.0.2",
+  "description": "Support for Sifu",
+  "main": "./dist/index.js",
+  "scripts": {
+    "webpack": "node ./node_modules/webpack/bin/webpack --config webpack.config.js --progress --profile --color",
+    "build": "npm run webpack && extractInfo && copyfiles -f ./gameart.png ./dist/",
+    "bundle7z": "7z a -t7z game-sifu.7z .\\dist\\index.js .\\dist\\info.json .\\gameart.jpg"
+  },
+  "author": "Tannin",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "7z-bin": "Nexus-Mods/7z-bin",
+    "@types/node": "^12.12.35",
+    "@types/react": "^16.9.43",
+    "@types/react-bootstrap": "^0.32.20",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "bluebird": "^3.7.2",
+    "copyfiles": "^2.4.1",
+    "i18next": "^19.0.1",
+    "react": "^16.12.0",
+    "react-bootstrap": "^0.33.0",
+    "react-dom": "^16.12.0",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.2",
+    "vortex-api": "github:Nexus-Mods/vortex-api",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "vortex-ext-common": "^0.4.0"
+  }
+}
